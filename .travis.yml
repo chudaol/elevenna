@@ -1,0 +1,19 @@
+language: node_js
+git:
+  depth: 3
+node_js:
+- node
+install: npm install
+script:
+- npm test
+- gulp
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+deploy:
+  provider: firebase
+  token:
+    secure: "EHzZ2p9XMxv9ZqDW8+vjYPFLpK5qKJ9sS9UW/jI4ESozS94qMilv11iqMZuDcWkV07zpWLWAjO/CFxJ/MCsr3fKcgIt7UTz5wSJuiD4wwT8XoCZzCpMbY35Mbpi/UyqBQYvgg4bZ46JMcKjnvKSnUZqINXvo7MKQ6Et+G5CwcnyEvyouW7ePUv1SpIHgqyjnOzswG773ry98muO8GV8CnqQHhn3v6S8IJ4uVnvivp1sKiUnSfMrvEZ7cn1cVnKNxcK4g5OdRfUeUEdTNEmt1fAQpOXVkGIynhAgcQWAQ6VoxtJk001sWHTDpifFO7TgvXRhppwFAmHJUDbjxJY3PBcdftLhAqJQKeE8irSg6L6lfBwLJh/JRqPAtVnHXxACEHSNmbaeHVM+QwcG2DL2Cha9j9yxxozMuTJ5WzuiqSG2viCRyh95i4bhUNnmfbWok1Vc869qoBVK8fgiEe5d/WydNPO7RDjoBhfv+Gt6LEZTQ1YJ6IY3Bz06wZKQq/RyWST9uYDhhDR3qd7J0V46NHGtGNQGx8V+cKm8NQN5LkZy0NX2YLh1Dbz96VwPgUt4Kv2aTgloWDmdVCYdkY6j/FBCILg8O0/UbQuYLOCqolU7/IJOXBrWMQSz+aeW7na0/MZvCdV4O8b27LHlI4uodkMtBJOJ07Ib3D7TzRohR4Zw="
+  project: elevenna
