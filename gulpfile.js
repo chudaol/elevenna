@@ -175,20 +175,21 @@ gulp.task("dist", function (cb) {
   ])
     .pipe(gulp.dest('./public/'))
   gulp.src([
-    './css/**/*',
-    './img/*',
-    './scss/*'
+    './css/**/*'
   ])
     .pipe(gulp.dest('./public/css/'))
   gulp.src([
-    './img/*',
-    './scss/*'
+    './img/**/*'
   ])
     .pipe(gulp.dest('./public/img/'))
   gulp.src([
     './scss/*'
   ])
     .pipe(gulp.dest('./public/scss/'))
+  gulp.src([
+    './js/*'
+  ])
+    .pipe(gulp.dest('./public/js/'))
 
   cb();
 })
